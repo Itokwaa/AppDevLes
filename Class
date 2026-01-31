@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Classs
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //declare
+            Student student1;
+            Student student2;
+            Student student3;
+
+            //assign value
+
+            //student 1
+            student1 = new Student();
+            student1.StudentNum = "123-0001";
+            student1.Name = "Irann";
+            student1.Year = 2005;
+            student1.Section = 2;
+            student1.FavoriteFilHero = "Lapu-lapu";
+
+            //student 2
+            student2 = new Student();
+            student2 = student1;
+
+            //student 3
+            student3 = new Student();
+            student3.StudentNum = "123-0002";
+
+
+            //output
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("Student 1: " + "Num: " + student1.StudentNum + " " + student1.Name + " " + student1.Year + " " + student1.Section + " " + student1.FavoriteFilHero);
+            Console.WriteLine("Student 2: " + "Num: " + student2.StudentNum + " " + student2.Name + " " + student2.Year + " " + student2.Section + " " + student2.FavoriteFilHero);
+            Console.WriteLine("Student 3: " + "Num: " + student3.StudentNum);
+
+            /* pang tamad
+             * Console.WriteLine(student1, student2);
+             */
+
+            Console.WriteLine("-------------------------------------------------");
+            //new name for student 2
+            student2.Name = "Ralph";
+
+            Console.WriteLine("Student 1: " + "Num: " + student1.StudentNum + " " + student1.Name + " " + student1.Year + " " + student1.Section + " " + student1.FavoriteFilHero);
+            Console.WriteLine("Student 2: " + "Num: " + student2.StudentNum + " " + student2.Name + " " + student2.Year + " " + student2.Section + " " + student2.FavoriteFilHero);
+            Console.WriteLine("Student 3: " + "Num: " + student3.StudentNum);
+
+            Console.ReadKey();
+            Console.Beep();
+        }
+        /*
+         *  public static void Print(Student student1, Student student2, Student studemt3)
+         *  {
+         *      Console.WriteLine(student1, student2, student3);
+         *      Console.WriteLine(student1, student2, student3);
+         *  }
+         */
+    }
+
+
+    // declaring a class (can change to "struct" to be primitive)
+    public class Student
+    {
+        public string StudentNum;
+        public string Name;
+        public int Year;
+        public int Section;
+        public string FavoriteFilHero;
+    }
+}
+
+
+
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
